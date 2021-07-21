@@ -69,6 +69,7 @@ resource "null_resource" "write_ssh_private_key" {
     user        = "root"
     private_key = chomp(tls_private_key.ssh_key_pair.private_key_pem)
     host        = metal_device.control_plane.0.access_public_ipv4
+    timeout     = "10m"
   }
 
   provisioner "file" {

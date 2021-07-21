@@ -44,7 +44,7 @@ variable "metal_device_reservations" {
 }
 variable metal_device_metro {
   description = "Equinix Metal metro location to deploy into"
-  default     = "dc"
+  default     = "da"
 }
 
 variable control_plane_plan {
@@ -113,13 +113,11 @@ variable ibm_dp_host_count {
 }
 
 variable ibm_resource_group_name {
-  default     = "default"
   description = "The name of the IBM resource group project. If 'ibm_create_resource_group' is true it will be created"
 }
 
 variable ibm_sat_location_name {
   description = "The name of the location to be created or pass existing location name"
-  default = "equinix-metal"
 }
 
 variable ibm_sat_location_zones {
@@ -128,8 +126,7 @@ variable ibm_sat_location_zones {
 }
 
 variable ibm_sat_managed_from {
-  description = "To list available multizone regions, run 'ibmcloud ks locations'. such as 'wdc', 'lon' or 'fra'."
-  default = "wdc"
+  description = "To list available multizone regions, run 'ibmcloud ks locations'. such as 'wdc04', 'wdc06' or 'lon04'"
 }
 
 variable ibm_cp_host_labels {
@@ -160,6 +157,6 @@ variable ibm_location_bucket {
 }
 
 variable ibm_region {
-  description = "Region of the IBM Cloud account. Currently supported regions for satellite are us-east, eu-gb, eu-de."
+  description = "Region of the IBM Cloud account. Currently supported regions for satellite are us-east and eu-gb region."
   default     = "us-east"
 }

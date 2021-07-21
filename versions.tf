@@ -9,7 +9,7 @@ terraform {
     }
     ibm = {
       source = "IBM-Cloud/ibm"
-      version = "1.27.0"
+      version = "1.28.0"
     }
     random = {
       source = "hashicorp/random"
@@ -24,5 +24,5 @@ terraform {
       source = "hashicorp/local"
     }
   }
-  required_version = ">= 0.14"
+  required_version = ">= 0.13"
 }
